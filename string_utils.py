@@ -2,10 +2,13 @@ def split_before_each_uppercases(formula):
     x=""
     y=[]
     for i in formula:
-        x+=i
-        if i.isupper():
+        if x=="":
+            x=+i
+        elif i.isupper():
             y.append(x)
             x=""
+            x+=i
+        else: x+=i
     return(y)
 
 
